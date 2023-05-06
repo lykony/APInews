@@ -1,0 +1,26 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    text-align: center;
+}
+
+#content {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.news {
+    display: flex;
+    gap: 5px;
+    padding: 10px;
+    border: 2px solid;
+    border-radius: 8px;
+}
+
+.news > img {
+    height: 250px;
+}
