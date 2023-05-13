@@ -11,7 +11,7 @@ fetch(url)
 
 function fillpage(data) {
     console.log(data);
-    data.articles.forEach(elem => {
+    data.articles.forEach((elem, i) => {
         content.innerHTML += 
         `
             <div class="news">
@@ -21,6 +21,9 @@ function fillpage(data) {
                     <p>Description: ${elem.description}</p>
                     <p>Author: ${elem.author}</p>
                     <p>Date: ${elem.publishedAt}</p>
+                    <form action="/news/${i}" method="get">
+                        <button type="submit">Клікніть, щоб читати повністю</button>
+                    </form>
                 </div>
             </div>
         `
