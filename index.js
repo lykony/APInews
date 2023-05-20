@@ -5,7 +5,8 @@ const apikey = "9a101e6534724c26a1fbff03690f154c"
 const url = `https://newsapi.org/v2/top-headlines?country=us&apiKey=${apikey}`
 
 app.use(cors({
-    origin: "*"
+    origin: "*",
+    methods: ["GET, POST"]
 }))
 
 app.use('/', express.static("static"))
