@@ -1,7 +1,12 @@
 const express = require("express")
+const cors = require("cors")
 const app = express()
 const apikey = "9a101e6534724c26a1fbff03690f154c"
 const url = `https://newsapi.org/v2/top-headlines?country=us&apiKey=${apikey}`
+
+app.use(cors({
+    origin: "*"
+}))
 
 app.use('/', express.static("static"))
 
